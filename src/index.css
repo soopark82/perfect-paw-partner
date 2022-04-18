@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-page-pets {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-page-first-col {
+    /* padding: 1.7em; */
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    background-color: #f5f9fd;
+    /* margin-top: 3.5rem; */
+}
+
+.main-page-second-col {
+    padding-top: 1em;
+    flex: 1;
+    background-color: #91a4b6;
+}
+
+.main-page-card-container h3 {
+    font-size: 30px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-page-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+  
+.card-img {
+    width: 250px;
+    height: 250px; 
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+  
+.main-page-card-container .card {
+    flex: 0 0 200px;
+    background-color: #e5eef7;        
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px #535353, 0 1px 3px #535353;
+}
+
+.card h3 { 
+    font-family: 'Chelsea Market', cursive;
+    font-size: 27px;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #eee;
+    font-family: 'Karla', sans-serif;
+    color: #535353;
+}
+
+.modal-button {
+    background-color: #ede7da; 
+    color: #535353;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #535353;
+    color: #ede7da;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-div {
+    position: sticky;
+    margin-bottom: 87px;
+}
+
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    min-height: 10vh;
+    background-color:#e5eef7;
+    border: solid .2rem #535353;
+    flex: 1;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    align-items: center;
+    padding: 5px;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    /* text-transform: uppercase; */
+    color:  #535353;
+    padding-left: 120px;
+}
+
+nav .nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 16px;
+}
+
+nav .nav-links a , nav .splash-link a, nav .hamburger-link div{
+    padding: 0%;
+    color: #535353;
+    font-size: 20px;
+}
+
+nav .nav-links a:hover, nav .splash-link a:hover, nav .hamburger-link div:hover, nav .filter-link div:hover{
+    color: #567ea3;
+  }
+
+nav .hamburger-link {
+    display: none;
+}
+
+nav .paw-link {
+    display: none;
+}
+
+nav .paw-link a, nav .filter-link div, nav .hamburger-link div {
+    color: #535353;
+    font-size: 24px;
+    margin: 12px;
+}
+
+nav>.paw-link>li>a {
+    font-size: 34px;
+}
+
+nav .filter-link {
+    display: none;
+}
+
+.dropdown {
+    padding: 20px;
+    background-color: #e5eef7;
+    border: 2px solid #535353;
+    position: fixed;
+    top: 91px;
+    right: 4px;
+    width: 50%;
+    flex-flow: column nowrap;
+    text-align: center;
+    display: none;
+}
+
+.dropdown a {
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    color: #535353;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+.dropdown a:hover {
+    color: #567ea3;
+}
+
+.filters {
+    float: left;
+    width: 240px;
+    background-color: #F5F9FD;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    color: #535353;
+}
+
+.filters h2 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-style: italic;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.filters label {
+    margin-left: 12px;
+}
+
+.filters input {
+    margin-left: 6px;
+}
+
+.loginButton {
+    text-decoration: none;
+}
+
+.bookmark-disabled {
+    background: #828282;
+    color: #BDBDBD;
+    cursor: default;
+}
+
+.logoutButton {
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    color: #535353;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+@media (min-width: 598px) {
+    .splash-body {
+      font-size: 15px;
+    }
+  }
+  
+
+@media all and (max-width: 768px) {
+    .bookmark-profile-button {
+        font-size: 27px;
+    }
+
+    .splash-body {
+        font-size: 17px;
+    }
+
+    #splash-contents h1{
+        font-size: 60px;
+    }
+
+    nav .hamburger-link {
+        display: block;
+    }
+
+    nav .paw-link {
+        display: block;
+    }
+
+    nav .splash-link {
+        display: none;
+    }
+
+    nav .logo {
+        display: none;
+    }
+    
+    nav .filter-link {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+    }
+
+    .filters {
+        display: fixed;
+        top: 87px;
+        width: 100%;
+
+    }
+
+    .main-page-pets {
+        flex-direction: column;
+    }
+    
+    .main-page-first-col {
+        display: block;
+        flex-basis: 250px;
+    }
+}
+
+/* Splash Page */
+.splash-body {
+    margin: 0;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 25px;
+    line-height: 1.6;
+}
+#splash-contents {
+    background-image: url('./splash-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: ivory;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#splash-contents h1 {
+    line-height: 1.2;
+    margin-bottom: 0.7em;
+}
+
+#splash-contents .splash-button {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color:ivory;
+    border: ivory 1.5px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#splash-contents .splash-button:hover {
+    background-color:ivory;
+    color: #535353;
+}
+
+/* Pet Profile Page */
+
+button {
+    font-family: 'Gurajada', sans-serif;
+    background-color: #ede7da; 
+    border: 2px solid #535353;
+    color: #535353;
+    padding: 1px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+   /* Pet Profile Page */
+  .profile-flex-container {
+    display: flex;
+    height: 850px;
+    margin: 1.8em;
+    background-color: #ede7da;
+    border-radius: 40px;
+    flex-direction: column; 
+    font-family: 'Gurajada', sans-serif;
+    color: #535353;
+  }
+  
+  .profile-column.pic-section, .profile-column.text-section {
+    margin: 1.5em 2em;
+  }
+  
+  .profile-column img {                                                         
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 3px 50px rgba(0, 0, 0, 0.16);
+    object-fit: cover;
+  }
+  
+  .name-item ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .name-item li {
+    display: inline;
+  }
+  
+  li .inline {
+    display: inline;
+  }
+  
+  li h1.inline {
+    margin-right: 0.1em;
+  }
+  
+  .name-item h1 {
+    font-family: 'Gurajada', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    margin: 0px;
+  }
+  
+  .filter-item h2 {
+    font-family: 'Gurajada', sans-serif;
+    display: inline;
+    padding-right: 0.5em;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0px;
+  }
+  
+  .bio-item > p {
+    font-family: 'Gurajada', sans-serif;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    font-size: 26px;
+    margin: 1em 0em;
+  }
+  
+  .material-icons.md-24 { 
+    font-size: 24px; 
+  }
+  
+  button.bookmark-button:hover {
+    background-color: #535353;
+    color: white;
+  }
+  
+ .bookmark-container {
+    background-color: #8eb0d1;
+    height: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+ } 
+
+.empty-bookmark {
+    height: 850px;
+    background-color: #8eb0d1; 
+}
+
+.empty-bookmark h1 {
+    margin-top: 0em;
+    margin-left: 1em;
+    font-family: 'Gurajada', sans-serif;
+    color: #535353;
+}
+
+.bookmarkBackButton {
+    margin: 1em;
+    color: #535353;
+    font-size: 20px;
+}
+
+.bookmarkCard {
+    background-color: #8eb0d1;
+    display: flex;
+    flex: 0 0 500px;  
+}
+
+.bookmarkCard button {    
+    display: flex;
+    flex: 0 0 500px;  
+    flex-direction: row;
+    background-color: #e5eef7;        
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px #535353, 0 1px 3px #535353;
+}
+
+.bookmark-card-img {
+    width: 250px;
+    height: 250px; 
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    padding-right: 1em;
+}
+
+.bookmarkCard h3 {
+    font-size: 50px;
+}
+
+.profileBackButton {
+    margin: 2em;
+    color: #535353;
+    font-size: 20px;
+}
+
+.bookmarkButton {
+    font-size: 32px;
+    padding-top: 3px;
+}
